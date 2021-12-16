@@ -1,8 +1,31 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import MapView from 'react-native-maps';
 
 const MapScreen = () => {
+  return (
+    <View>
+      <MapView styles={styles.map} />
+      <Text>Test</Text>
+    </View>
+  );
+};
+
+const HeaderMap = () => {
   return <View></View>;
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  map: {
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  },
+});
 
 export default MapScreen;

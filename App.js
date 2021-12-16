@@ -11,8 +11,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Carte" component={Map} />
-        <Tab.Screen name="Préférences" component={Config} />
+        <Tab.Screen
+          name="Carte"
+          component={Map}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Préférences"
+          component={Config}
+          options={{ headerShown: false }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
