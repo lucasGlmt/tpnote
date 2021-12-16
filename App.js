@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import Map from './Map';
+import MapScreen from './Map';
 import Config from './Config';
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +13,7 @@ export default function App() {
       <Tab.Navigator>
         <Tab.Screen
           name="Carte"
-          component={Map}
+          component={MapScreen}
           options={{ headerShown: false }}
         />
         <Tab.Screen
